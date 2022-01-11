@@ -42,6 +42,7 @@ vault write auth/aws/role/kabu-lambda-extension-demo-lambda-role \
 ```
 
 ## CREATE INFRA
+* zip node.zip index.js
 * replace `vault_addr` in main.tf
 * do `terraform apply`
 * copy an arn from output
