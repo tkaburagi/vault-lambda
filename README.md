@@ -1,3 +1,9 @@
+## CREATE INFRA
+* zip node.zip index.js
+* replace `vault_addr` in main.tf
+* do `terraform apply`
+* copy an arn from output
+
 ## VAULT SETUP
 ```shell
 vault secrets enable aws
@@ -40,13 +46,6 @@ vault write auth/aws/role/kabu-lambda-extension-demo-lambda-role \
     policies=read-s3 \
     ttl=5m
 ```
-
-## CREATE INFRA
-* zip node.zip index.js
-* replace `vault_addr` in main.tf
-* do `terraform apply`
-* copy an arn from output
-
 
 ## TEST
 * test a function from AWS console
